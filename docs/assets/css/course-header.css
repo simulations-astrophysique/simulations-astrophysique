@@ -1,0 +1,120 @@
+
+.course-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.65rem !important;
+}
+
+.course-header-left ul {
+    margin: 0.35rem 0 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.course-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ai-indicator {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ai-indicator img {
+    width: 48px;
+    height: auto;
+    display: block;
+}
+
+.course-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.course-header-actions .report-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+
+    font-weight: 500;
+    text-decoration: none;
+
+    border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+    border-radius: 999px;
+
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.course-header-actions .report-link:hover,
+.course-header-actions .report-link:focus-visible {
+    border-color: var(--md-accent-fg-color, #00b8d4);
+    background: var(--md-accent-fg-color--transparent, rgba(0, 184, 212, 0.1));
+}
+
+.course-header li {
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .course-header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.course-page-header {
+    margin-bottom: 2rem;
+}
+
+/* Le titre est rendu par le en-tête; masque le H1 du contenu */
+.md-content__inner:has(.course-page-header) > h1 {
+    display: none;
+}
+
+.course-title {
+    margin: 0 0 1rem 0;
+    padding: 0;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.course-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+
+    padding: 0.4rem 0 0.4rem;
+
+    font-size: 0.85rem;
+}
+
+.course-info {
+    margin: 1rem 0;
+}
+
+.md-typeset details.course-info[open] > summary {
+    margin-bottom: 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #00b8d4;
+}
+
+.course-summary {
+    margin: 1rem 0 0;
+}
+
+.course-summary p {
+    margin: 0.25rem 0 0;
+}

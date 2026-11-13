@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if page.meta.contents %}
+    {% include "partials/course-header.html" %}
+{% endif %}
+
+{{ super() }}
+
+{% endblock %}

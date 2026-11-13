@@ -1,0 +1,60 @@
+<div class="course-page-header">
+<h1 class="course-title">{{ page.title }}</h1>
+
+<details class="info course-info">
+<summary>Information sur la page</summary>
+
+<div class="course-header">
+
+  <div class="course-header-left">
+    <strong>📚 Contenus</strong>
+
+    <ul>
+      {% for item in page.meta.contents %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="course-header-right">
+
+    <div>
+      ⏱️ <strong>Temps de lecture :</strong> {{ page.meta.reading_time }}
+    </div>
+
+    {% if page.meta.ai_image or page.meta.report_url %}
+    <div class="course-header-actions">
+      {% if page.meta.ai_image %}
+      <div class="ai-indicator">
+        <img
+          src="{{ page.meta.ai_image }}"
+          alt="Niveau d'utilisation de l'intelligence artificielle"
+        >
+      </div>
+      {% endif %}
+
+      {% if page.meta.report_url %}
+      <a
+        class="report-link"
+        href="{{ page.meta.report_url }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        🐞 Signaler une erreur
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+
+</div>
+</details>
+
+{% if page.meta.summary_html %}
+<div class="course-summary">
+  <strong>Résumé</strong>
+  {{ page.meta.summary_html }}
+</div>
+<hr/>
+{% endif %}
+</div>
